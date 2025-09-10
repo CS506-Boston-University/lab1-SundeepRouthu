@@ -59,7 +59,7 @@ class Add:
             return self.p1
         if isinstance(self.p1, Int) and isinstance(self.p2, Int):
             return Int(self.p1.i + self.p2.i)
-        
+
         return self
 
 
@@ -117,7 +117,7 @@ class Sub:
         if isinstance(self.p2, (Add, Div)):  # Check for both Add and Div
             return repr(self.p1) + " - ( " + repr(self.p2) + " )"
         return repr(self.p1) + " - " + repr(self.p2)
-    
+
     def evaluate(self, x_value):
         # TODO: Implement evaluation for subtraction
         # Should return the difference of the two operands
